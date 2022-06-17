@@ -25,7 +25,7 @@ class Channel::TwilioSms < ApplicationRecord
   validates :account_sid, presence: true
   validates :auth_token, presence: true
   # NOTE: allowing nil for future when we suppor twilio messaging services
-  # https://github.com/chatwoot/chatwoot/pull/4242
+  # https://github.com/nsakibp/chatwoot/pull/4242
   validates :phone_number, uniqueness: true, allow_nil: true
 
   enum medium: { sms: 0, whatsapp: 1 }
